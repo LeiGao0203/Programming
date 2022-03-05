@@ -28,14 +28,14 @@ run;
 	by  vartrt ;
 	run;
 %mend;
-%freq(tables = varethnic);
+
 
 %macro sort  (tables=);
 	proc sort data = &tables;
 	by &tables;
 	run;
 %mend;
-%sort(tables = varethnic);
+
 
 /* transpose dataset */
 %macro trans ( tables=);
@@ -49,7 +49,7 @@ run;
 		set &tables._t;
 	run;
 %mend;
-%trans(tables = varethnic);
+
 
 %macro data_clean (tables =);
 	data &tables._clean (rename=('Drug a'n =DrugA &tables = catego));
@@ -61,7 +61,7 @@ run;
 	if placebo =. then placebo = 0;
 	run;
 %mend;
-%data_clean (tables = varethnic);
+
 
 %macro format (tables = );
 proc sql;
