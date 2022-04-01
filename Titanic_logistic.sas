@@ -1,14 +1,14 @@
-proc import datafile = '/home/u59019227/titanic/train.csv'  
+proc import datafile = '/home/****/titanic/train.csv'  
     out = train 
     dbms=csv 
     replace;
 run;
-proc import datafile = '/home/u59019227/titanic/test.csv'  
+proc import datafile = '/home/****/titanic/test.csv'  
     out = test 
     dbms=csv 
     replace;
 run;
-proc import datafile = '/home/u59019227/titanic/gender_submission.csv'  
+proc import datafile = '/home/****/titanic/gender_submission.csv'  
     out = submission 
     dbms=csv 
     replace;
